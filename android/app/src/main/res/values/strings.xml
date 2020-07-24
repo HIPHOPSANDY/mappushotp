@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">pushapp</string>
+    <string name="default_notification_channel_id" />
+    <string name="default_notification_channel_name" />
+    <string name="msg_subscribed" />
+    <string name="msg_subscribe_failed" />
+</resources>
