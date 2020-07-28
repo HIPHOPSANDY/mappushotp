@@ -1,17 +1,33 @@
 import React, {Component} from 'react';
 import {
+  Container,
+  Header,
+  Content,
+  Form,
+  Item,
+  Input,
+  Label,
+  Title,
+  Body,
+  Left,
+  Right,
+  List,
+  ListItem,
+} from 'native-base';
+import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
   View,
   Text,
   TextInput,
+  Button,
 } from 'react-native';
 import firebase from 'react-native-firebase';
 
 
 
-class App extends Component {
+class App2 extends Component {
   state = {
     phone: '',
     confirmResult: null,
@@ -52,6 +68,7 @@ class App extends Component {
         .then((user) => {
           this.setState({userId: user.uid});
           alert(`Verified! ${user.uid}`);
+          
         })
         .catch((error) => {
           alert(error.message);
@@ -80,12 +97,16 @@ class App extends Component {
           onPress={this.handleVerifyCode}>
           <Text style={styles.themeButtonTitle}>Verify Code</Text>
         </TouchableOpacity>
+        
+        
       </View>
     );
   };
   // ... rest of the code
   render() {
     return (
+
+      
       <SafeAreaView style={[styles.container, {backgroundColor: '#333'}]}>
         <View style={styles.page}>
           <TextInput
@@ -100,6 +121,7 @@ class App extends Component {
             maxLength={15}
             editable={this.state.confirmResult ? false : true}
           />
+          
           <TouchableOpacity
             style={[styles.themeButton, {marginTop: 20}]}
             onPress={
@@ -111,6 +133,12 @@ class App extends Component {
               {this.state.confirmResult ? 'Change Phone Number' : 'Send Code'}
             </Text>
           </TouchableOpacity>
+
+          <Text></Text>
+          <Button
+            title="Userlogin"
+            onPress={() => this.navigation.navigate('Userscreen')}
+          />
           {this.state.confirmResult ? this.renderConfirmationCodeView() : null}
         </View>
       </SafeAreaView>
@@ -159,4 +187,4 @@ const styles = StyleSheet.create({
     marginTop: 50
   }
 })
-export default App;
+export default App2;

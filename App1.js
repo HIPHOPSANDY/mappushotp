@@ -135,8 +135,34 @@ class App extends Component {
       coordinate={{latitude: 13.067439,
         longitude: 80.237617}}
       title={"VisionU"}
-      description={"Volunteer location"}
+      description={"Volunteer location1"}
     />
+    
+    <Marker
+      coordinate={{latitude: 13.6768,
+        longitude: 80.237617}}
+      title={"VisionU"}
+      description={"Volunteer location2"}
+    />
+    <Marker
+      coordinate={{latitude: 13.067439,
+        longitude: 80.237617}}
+      title={"VisionU"}
+      description={"Volunteer location3"}
+    />
+    <Marker
+      coordinate={{latitude: 13.067439,
+        longitude: 80.237617}}
+      title={"VisionU"}
+      description={"Volunteer location4"}
+    />
+    <Marker
+      coordinate={{latitude: 13.067439,
+        longitude: 80.237617}}
+      title={"VisionU"}
+      description={"Volunteer location5"}
+    />
+
     </MapView> 
       
     );
